@@ -9,15 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^2.46.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tsparticles/engine": "^3.1.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.1.0",
+    "cal-sans": "^1.0.1",
     "clsx": "^2.1.0",
     "clx": "^1.0.0",
     "framer-motion": "^11.0.3",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "simplex-noise": "^4.0.1",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {

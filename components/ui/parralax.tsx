@@ -57,7 +57,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[300vh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex h-[300vh]  flex-col self-auto overflow-hidden pb-10 pt-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -105,12 +105,14 @@ export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
       <h1 className="text-2xl font-bold md:text-7xl dark:text-white">
-        The Ultimate <br /> development studio by Glen Miracle
+        Glen Miracle, <br /> Built for the Web!
       </h1>
       <p className="mt-8 max-w-2xl text-base md:text-xl dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        I am an Software Engineer with a passion for crafting web applications
+        and exploring the potential of AI/ML. Currently honing my skills as a
+        sophomore at the African Leadership University, I am a javascript
+        enthusiast who thrives on building innovative solutions with powerful
+        libraries.
       </p>
     </div>
   );
