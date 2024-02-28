@@ -2,19 +2,32 @@
 import React from "react";
 import { HeroParallax } from "@/components/ui/parralax";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import { TextGenerateEffect } from "@/components/ui/text-reveal";
+import { PinContainer } from "@/components/ui/3d-pin";
+import Image from "next/image";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { InfiniteMovingCards } from "@/components/ui/infinte-moving-cards";
+// projects
 import know_africa from '../public/assets/Know-Africa.jpeg';
 import eduford from '../public/assets/eduford2.png'
 import crypto from '../public/assets/crypto.png'
 import wrizzle from '../public/assets/wrizzle1.png'
 import alu from "../public/assets/alu-logo.png";
 import alx from "../public/assets/alx.png";
-import { TextGenerateEffect } from "@/components/ui/text-reveal";
-import { PinContainer } from "@/components/ui/3d-pin";
-import Image from "next/image";
+
 import { Button } from "@/components/ui/moving-border";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+
+// wrappers
+import { IconContainer } from "./wrappers/IconContainer";
+
+// icons
+import { FaAws, FaDocker } from "react-icons/fa6";
+import { Radar } from "@/components/ui/radar";
+import { IoGitBranch } from "react-icons/io5";
+import { SiNextdotjs, SiPostman } from "react-icons/si";
+import { CiGrid42 } from "react-icons/ci";
+import { FaServer } from "react-icons/fa";
+import { HoverEffect } from "@/components/ui/card-hover";
 
 const navItems = [
   {
@@ -195,6 +208,63 @@ const content = [
   },
 ];
 
+export const languages = [
+  {
+    title: "JavaScript",
+    description: "A versatile scripting language commonly used for web development and beyond. It adds interactivity to web pages and enables complex functionality.",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    icon: "IoLogoJavascript"
+  },
+  {
+    title: "TypeScript",
+    description: "A superset of JavaScript that adds optional static typing, improving code maintainability and catching errors early in development.",
+    link: "https://www.typescriptlang.org/docs/",
+    icon: "SiTypescript"
+  },
+  {
+    title: "Tailwind CSS",
+    description: "A utility-first CSS framework that provides a low-level, class-based approach to styling web applications. It offers rapid development with pre-built classes and customization options.",
+    link: "https://tailwindcss.com/docs/",
+    icon: "SiTailwindcss"
+  },
+  {
+    title: "Python",
+    description: "A general-purpose, interpreted programming language known for its readability, simplicity, and extensive libraries. It's widely used in web development, data science, scripting, machine learning, and various other domains.",
+    link: "https://docs.python.org/3/",
+    icon: "FaPython"
+  },
+  {
+    title: "React",
+    description: "A JavaScript library for building user interfaces. It's known for its component-based architecture, virtual DOM, and unidirectional data flow, making it efficient and scalable for complex web applications.",
+    link: "https://reactjs.org/docs/getting-started.html",
+    icon: "FaReact"
+  },
+  {
+    title: "Svelte",
+    description: "A component-based web framework that compiles code at build time, resulting in smaller bundle sizes and improved performance. It offers a reactive approach to data handling and a familiar JavaScript syntax.",
+    link: "https://svelte.dev/docs",
+    icon: "SiSvelte"
+  },
+  {
+    title: "C#",
+    description: "A general-purpose, object-oriented programming language developed by Microsoft. It's widely used for building various types of applications, including web services, desktop applications, and games. C# is known for its strong typing, garbage collection, and integration with the .NET framework.",
+    link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+    icon: "TbBrandCSharp"
+  },
+  {
+    title: "Java",
+    description: "A general-purpose, object-oriented programming language known for its platform independence and vast ecosystem of libraries and frameworks. Java applications can run on different operating systems without modification, making it popular for enterprise applications and web development.",
+    link: "https://docs.oracle.com/en/java/javase/latest/docs/index.html",
+    icon: "FaJava"
+  },
+  {
+    title: "HTML & CSS",
+    description: "The fundamental building blocks of web pages. HTML (HyperText Markup Language) defines the structure and content of a web page, while CSS (Cascading Style Sheets) controls the visual presentation. Together, they provide a standardized way to create and style web pages.",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    icon: "FaHtml5"
+  },
+];
+
 
 const HeroParallaxDemo = () => {
 
@@ -228,11 +298,12 @@ const HeroParallaxDemo = () => {
           Education
         </p>
 
-      <div className="h-[40rem] w-full flex flex-col items-center justify-center gap-6 md:flex-row">
+      <div className="h-[40rem] w-full flex flex-col items-center justify-center sm:gap-6 md:flex-row">
           {/* pin container */}
         <PinContainer
           title="www.alueducation.com"
           href="https://alueducation.com"
+          className="mt-4"
         >
           <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
@@ -271,12 +342,80 @@ const HeroParallaxDemo = () => {
 
       <div className="p-10 w-full h-full">
         <div className="flex justify-center items-center m-2">
-        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
-          Soft Skills
-        </p>
+          <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+            Soft Skills
+          </p>
         </div>
         <StickyScroll content={content} />
       </div>
+
+    {/* radar */}
+      <div className="mt-6 p-2">
+        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+          Tech Stack and Languages
+        </p>
+
+        <div className="relative flex h-96 w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+            <IconContainer 
+              text="SSR" 
+              delay={0.2}
+              icon={<FaServer className="h-8 w-8 text-slate-600" />}
+            />
+            <IconContainer
+              delay={0.4}
+              text="Docker"
+              icon={<FaDocker className=" h-8 w-8 text-slate-600" />}
+            />
+            <IconContainer
+              text="FrontEnd"
+              delay={0.3}
+              icon={<CiGrid42 className=" h-8 w-8 text-slate-600" />}
+            />
+          </div>
+        </div>
+        <div className="mx-auto w-full max-w-md">
+          <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+            <IconContainer
+              text="Postman API's"
+              delay={0.5}
+              icon={<SiPostman className=" h-8 w-8 text-slate-600" />}
+            />
+            <IconContainer
+              text="NextJs"
+              icon={
+                <SiNextdotjs className=" h-8 w-8 text-slate-600" />
+              }
+              delay={0.8}
+            />
+          </div>
+        </div>
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+            <IconContainer
+              delay={0.6}
+              text="Git/Github"
+              icon={<IoGitBranch className=" h-8 w-8 text-slate-600" />}
+            />
+            <IconContainer
+              delay={0.7}
+              text="Cloud (AWS)"
+              icon={<FaAws className=" h-8 w-8 text-slate-600" />}
+        />
+          </div>
+        </div>
+
+        <Radar className="absolute -bottom-12" />
+        <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
+      </div>
+
+      </div>
+      </div>
+
+      {/* Languages */}
+      <div className="max-w-5xl mx-auto px-8">
+        <HoverEffect items={languages} />
       </div>
     </>
   );

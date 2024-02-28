@@ -105,7 +105,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
-      <h1 className="text-2xl font-bold md:text-7xl dark:text-gray-300">
+      <h1 className="text-6xl font-bold md:text-7xl dark:text-gray-300">
         Glen Miracle, <br /> Built for the Web!
         <TextGenerateEffect words="I am an Software Engineer with a passion for crafting web applications
         and exploring the potential of AI/ML. Currently honing my skills as a
