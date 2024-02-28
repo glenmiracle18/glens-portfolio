@@ -7,8 +7,9 @@ import {
   useSpring,
   MotionValue,
 } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { TextGenerateEffect } from "./text-reveal";
 
 export const HeroParallax = ({
   products,
@@ -16,7 +17,7 @@ export const HeroParallax = ({
   products: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: StaticImageData | string;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -57,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[300vh]  flex-col self-auto overflow-hidden pb-10 pt-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex mb-16  flex-col self-auto overflow-hidden pb-10 pt-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -104,16 +105,14 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
-      <h1 className="text-2xl font-bold md:text-7xl dark:text-white">
+      <h1 className="text-2xl font-bold md:text-7xl dark:text-gray-300">
         Glen Miracle, <br /> Built for the Web!
-      </h1>
-      <p className="mt-8 max-w-2xl text-base md:text-xl dark:text-neutral-200">
-        I am an Software Engineer with a passion for crafting web applications
+        <TextGenerateEffect words="I am an Software Engineer with a passion for crafting web applications
         and exploring the potential of AI/ML. Currently honing my skills as a
         sophomore at the African Leadership University, I am a javascript
         enthusiast who thrives on building innovative solutions with powerful
-        libraries.
-      </p>
+        libraries." />
+      </h1>
     </div>
   );
 };
@@ -125,7 +124,7 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: StaticImageData | string;
   };
   translate: MotionValue<number>;
 }) => {

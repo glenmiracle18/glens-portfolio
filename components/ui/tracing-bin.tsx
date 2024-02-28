@@ -52,6 +52,7 @@ export const TracingBeam = ({
     },
   );
 
+
   return (
     <motion.div
       className={cn("relative mx-auto h-full w-full max-w-4xl", className)}

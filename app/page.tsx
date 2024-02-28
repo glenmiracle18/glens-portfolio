@@ -4,6 +4,17 @@ import { HeroParallax } from "@/components/ui/parralax";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { InfiniteMovingCards } from "@/components/ui/infinte-moving-cards";
+import know_africa from '../public/assets/Know-Africa.jpeg';
+import eduford from '../public/assets/eduford2.png'
+import crypto from '../public/assets/crypto.png'
+import wrizzle from '../public/assets/wrizzle1.png'
+import alu from "../public/assets/alu-logo.png";
+import alx from "../public/assets/alx.png";
+import { TextGenerateEffect } from "@/components/ui/text-reveal";
+import { PinContainer } from "@/components/ui/3d-pin";
+import Image from "next/image";
+import { Button } from "@/components/ui/moving-border";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 
 const navItems = [
   {
@@ -22,8 +33,8 @@ const navItems = [
     icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
-    name: "Experience",
-    link: "/experience",
+    name: "Gallery",
+    link: "/gallery",
     icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
 ];
@@ -36,23 +47,22 @@ export const products = [
       "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
   },
   {
+    title: "Eduford",
+    link: "https://glenmiracle18.github.io/university-website.github.io/",
+    thumbnail:
+      eduford,
+  },
+  {
+    title: "Know-Africa",
+    link: "https://know-africa.vercel.app",
+    thumbnail:
+      know_africa,
+  },
+  {
     title: "Cursor",
     link: "https://cursor.so",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
   },
   {
     title: "Editrix AI",
@@ -68,16 +78,16 @@ export const products = [
   },
 
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
+    title: "Crpto Vault",
+    link: "https://cryptovault.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+      crypto,
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    title: "WrizzleShop",
+    link: "https://wrizzleshop.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+      wrizzle,
   },
   {
     title: "Tailwind Master Kit",
@@ -157,27 +167,116 @@ const testimonials = [
   },
 ];
 
+const content = [
+  {
+    title: "Teamwork",
+    description:
+      "I thrive in collaborative environments, actively listening to my team members, and communicating clearly to achieve common goals. I foster a positive and supportive work environment, readily sharing knowledge and collaborating effectively to solve problems together.",
+  },
+  {
+    title: "Communication",
+    description:
+      "I excel at conveying technical information clearly and concisely to both technical and non-technical audiences. I write well-documented code, adeptly explain complex concepts in an understandable way, and actively listen to feedback, readily incorporating it to improve my communication and understanding.",
+  },
+  {
+    title: "Problem-solving",
+    description:
+      "I possess a strong ability to identify, analyze, and solve complex technical problems creatively and efficiently. My critical thinking and analytical skills enable me to break down large problems into smaller, manageable steps and find optimal solutions.",
+  },
+  {
+    title: "Adaptability",
+    description:
+      "I am a lifelong learner who readily embraces and adjusts to new technologies, tools, and methodologies. I stay up-to-date with the latest trends, remaining open to new ideas and approaches to continuously improve my skills and adapt to evolving environments.",
+  },
+  {
+    title: "Time Management",
+    description:
+      "I am proficient in managing my time effectively, consistently meeting deadlines and delivering projects on time and within budget. I prioritize tasks efficiently, remain organized, and effectively manage distractions to ensure smooth workflow and successful project completion.",
+  },
+];
+
+
 const HeroParallaxDemo = () => {
+
+  const testword = "this is it";
   return (
     <>
       <FloatingNav navItems={navItems} />
       <HeroParallax products={products} />
 
-      {/* inifite moving cards */}
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-        className="flex w-screen"
-      />
       {/* background page */}
-      <div className="dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex  h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+      <div className="mb-16 dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex  h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         {/* all the elements in here will be placed on the background */}
+        <div className="flex flex-col justify-center items-center">
+          <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+            Let me be on your Team!
+          </p>
+          <Button
+            borderRadius="1.75rem"
+            className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+          >
+            Contact Me
+          </Button>
+        </div>
+      </div>
+
+      {/* next section  */}
+      <div className="flex flex-col justify-center items-center mt-6 p-2 h-full">
         <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
-          Backgrounds
+          Education
         </p>
+
+      <div className="h-[40rem] w-full flex flex-col items-center justify-center gap-6 md:flex-row">
+          {/* pin container */}
+        <PinContainer
+          title="www.alueducation.com"
+          href="https://alueducation.com"
+        >
+          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+            <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+              African Leadership University
+            </h3>
+            <div className="text-base !m-0 !p-0 font-normal">
+              <span className="text-slate-500 ">
+                Currently Pursuing a Bachelors degree in Software Engineering
+              </span>
+            </div>
+            <div className="flex flex-1 w-full rounded-lg mt-4 items-center justify-center mb-4">
+              <Image src={alu} alt="school logo" object-fint="conteaion" />
+            </div>
+          </div>
+        </PinContainer>
+
+        <PinContainer
+          title="www.alx-africa.com"
+          href="https://www.alxafrica.com/"
+        >
+          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+            <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+              ALX-Africa
+            </h3>
+            <div className="text-base !m-0 !p-0 font-normal">
+              <span className="text-slate-500 ">
+                Graduate of the 12 months software Enginering program and specialized in FrontEnd Development
+              </span>
+            </div>
+            <div className="flex flex-1 w-full rounded-lg mt-4 items-center justify-center mb-4">
+              <Image src={alx} alt="school logo" object-fint="conteaion" />
+            </div>
+          </div>
+        </PinContainer>
+      </div>
+
+      <div className="p-10 w-full h-full">
+        <div className="flex justify-center items-center m-2">
+        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+          Soft Skills
+        </p>
+        </div>
+        <StickyScroll content={content} />
+      </div>
       </div>
     </>
   );
