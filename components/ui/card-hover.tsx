@@ -1,19 +1,25 @@
 import { cn } from "@/utils/cn";
+import { IconBadge } from "@/app/wrappers/icon-badge";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { IconType } from "react-icons/lib";
 
-export const HoverEffect = ({
-  items,
-  className,
-}: {
+
+interface HoverEffectProps {
   items: {
     title: string;
     description: string;
     link: string;
+    icon: IconType;
   }[];
   className?: string;
-}) => {
+}
+
+export const HoverEffect = ({
+  items,
+  className,
+}: HoverEffectProps) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -49,7 +55,10 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
+            <CardTitle className="flex flex-row items-center">
+              <IconBadge Icon={item.icon} />
+              {item.title}
+            </CardTitle >
             <CardDescription>{item.description}</CardDescription>
           </Card>
         </Link>

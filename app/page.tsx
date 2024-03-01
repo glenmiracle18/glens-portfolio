@@ -20,11 +20,13 @@ import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 // wrappers
 import { IconContainer } from "./wrappers/IconContainer";
 
-// icons
-import { FaAws, FaDocker } from "react-icons/fa6";
+// icons for the languages section
+import { FaAws, FaDocker, FaHtml5, FaJava, FaJs, FaPython, FaReact } from "react-icons/fa6";
+import { TbBrandCSharp } from "react-icons/tb"
+
 import { Radar } from "@/components/ui/radar";
 import { IoGitBranch } from "react-icons/io5";
-import { SiNextdotjs, SiPostman } from "react-icons/si";
+import { SiNextdotjs, SiPostman, SiSvelte, SiTailwindcss, SiTensorflow, SiTypescript } from "react-icons/si";
 import { CiGrid42 } from "react-icons/ci";
 import { FaServer } from "react-icons/fa";
 import { HoverEffect } from "@/components/ui/card-hover";
@@ -213,55 +215,55 @@ export const languages = [
     title: "JavaScript",
     description: "A versatile scripting language commonly used for web development and beyond. It adds interactivity to web pages and enables complex functionality.",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    icon: "IoLogoJavascript"
+    icon: FaJs
   },
   {
     title: "TypeScript",
     description: "A superset of JavaScript that adds optional static typing, improving code maintainability and catching errors early in development.",
     link: "https://www.typescriptlang.org/docs/",
-    icon: "SiTypescript"
+    icon: SiTypescript
   },
   {
     title: "Tailwind CSS",
     description: "A utility-first CSS framework that provides a low-level, class-based approach to styling web applications. It offers rapid development with pre-built classes and customization options.",
     link: "https://tailwindcss.com/docs/",
-    icon: "SiTailwindcss"
+    icon: SiTailwindcss
   },
   {
     title: "Python",
     description: "A general-purpose, interpreted programming language known for its readability, simplicity, and extensive libraries. It's widely used in web development, data science, scripting, machine learning, and various other domains.",
     link: "https://docs.python.org/3/",
-    icon: "FaPython"
+    icon: FaPython
   },
   {
     title: "React",
     description: "A JavaScript library for building user interfaces. It's known for its component-based architecture, virtual DOM, and unidirectional data flow, making it efficient and scalable for complex web applications.",
     link: "https://reactjs.org/docs/getting-started.html",
-    icon: "FaReact"
+    icon: FaReact
   },
   {
     title: "Svelte",
     description: "A component-based web framework that compiles code at build time, resulting in smaller bundle sizes and improved performance. It offers a reactive approach to data handling and a familiar JavaScript syntax.",
     link: "https://svelte.dev/docs",
-    icon: "SiSvelte"
+    icon: SiSvelte
   },
   {
     title: "C#",
     description: "A general-purpose, object-oriented programming language developed by Microsoft. It's widely used for building various types of applications, including web services, desktop applications, and games. C# is known for its strong typing, garbage collection, and integration with the .NET framework.",
     link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
-    icon: "TbBrandCSharp"
+    icon: TbBrandCSharp
   },
   {
     title: "Java",
     description: "A general-purpose, object-oriented programming language known for its platform independence and vast ecosystem of libraries and frameworks. Java applications can run on different operating systems without modification, making it popular for enterprise applications and web development.",
     link: "https://docs.oracle.com/en/java/javase/latest/docs/index.html",
-    icon: "FaJava"
+    icon: FaJava
   },
   {
     title: "HTML & CSS",
     description: "The fundamental building blocks of web pages. HTML (HyperText Markup Language) defines the structure and content of a web page, while CSS (Cascading Style Sheets) controls the visual presentation. Together, they provide a standardized way to create and style web pages.",
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    icon: "FaHtml5"
+    icon: FaHtml5
   },
 ];
 
@@ -352,7 +354,7 @@ const HeroParallaxDemo = () => {
     {/* radar */}
       <div className="mt-6 p-2">
         <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
-          Tech Stack and Languages
+          Tech Stack and Cloud
         </p>
 
         <div className="relative flex h-96 w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
@@ -369,9 +371,9 @@ const HeroParallaxDemo = () => {
               icon={<FaDocker className=" h-8 w-8 text-slate-600" />}
             />
             <IconContainer
-              text="FrontEnd"
+              text="TensorFlow"
               delay={0.3}
-              icon={<CiGrid42 className=" h-8 w-8 text-slate-600" />}
+              icon={<SiTensorflow className=" h-8 w-8 text-slate-600" />}
             />
           </div>
         </div>
@@ -414,8 +416,13 @@ const HeroParallaxDemo = () => {
       </div>
 
       {/* Languages */}
-      <div className="max-w-5xl mx-auto px-8">
-        <HoverEffect items={languages} />
+      <div className="flex flex-col justify-center items-center mt-12">
+        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+          Proficient Languages
+        </p>
+        <div className="max-w-5xl mx-auto px-8">
+          <HoverEffect items={languages} />
+        </div>
       </div>
     </>
   );
