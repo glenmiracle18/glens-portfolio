@@ -57,3 +57,7 @@
         @apply bg-background text-foreground;
     }
 }
+
+.mask {
+    mask-image: radial-gradient(ellipse at center, transparent 20%, #020817);
+}

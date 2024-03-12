@@ -270,7 +270,7 @@ export const MainPage = () => {
       <HeroParallax products={products} />
 
       {/* background page */}
-      <div className="dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative mb-16 flex  h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+      <div className="dark:bg-grid-white/[0.2] bg-grid-black/[0.2] bg-blue dark:bg-blue relative  mb-16 flex h-[50rem] w-full items-center justify-center">
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         {/* all the elements in here will be placed on the background */}
