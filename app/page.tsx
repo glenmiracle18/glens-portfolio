@@ -7,10 +7,10 @@ import { PinContainer } from "@/components/ui/3d-pin";
 import Image from "next/image";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 // projects
-import know_africa from '../public/assets/Know-Africa.jpeg';
-import eduford from '../public/assets/eduford2.png'
-import crypto from '../public/assets/crypto.png'
-import wrizzle from '../public/assets/wrizzle1.png'
+import know_africa from "../public/assets/Know-Africa.jpeg";
+import eduford from "../public/assets/eduford2.png";
+import crypto from "../public/assets/crypto.png";
+import wrizzle from "../public/assets/wrizzle1.png";
 import alu from "../public/assets/alu-logo.png";
 import alx from "../public/assets/alx.png";
 
@@ -21,12 +21,27 @@ import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { IconContainer } from "./wrappers/IconContainer";
 
 // icons for the languages section
-import { FaAws, FaDocker, FaHtml5, FaJava, FaJs, FaPython, FaReact } from "react-icons/fa6";
-import { TbBrandCSharp } from "react-icons/tb"
+import {
+  FaAws,
+  FaDocker,
+  FaHtml5,
+  FaJava,
+  FaJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa6";
+import { TbBrandCSharp } from "react-icons/tb";
 
 import { Radar } from "@/components/ui/radar";
 import { IoGitBranch } from "react-icons/io5";
-import { SiNextdotjs, SiPostman, SiSvelte, SiTailwindcss, SiTensorflow, SiTypescript } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiPostman,
+  SiSvelte,
+  SiTailwindcss,
+  SiTensorflow,
+  SiTypescript,
+} from "react-icons/si";
 import { CiGrid42 } from "react-icons/ci";
 import { FaServer } from "react-icons/fa";
 import { HoverEffect } from "@/components/ui/card-hover";
@@ -54,7 +69,7 @@ const navItems = [
   },
 ];
 
-export const products = [
+const products = [
   {
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
@@ -64,14 +79,12 @@ export const products = [
   {
     title: "Eduford",
     link: "https://glenmiracle18.github.io/university-website.github.io/",
-    thumbnail:
-      eduford,
+    thumbnail: eduford,
   },
   {
     title: "Know-Africa",
     link: "https://know-africa.vercel.app",
-    thumbnail:
-      know_africa,
+    thumbnail: know_africa,
   },
   {
     title: "Cursor",
@@ -95,14 +108,12 @@ export const products = [
   {
     title: "Crpto Vault",
     link: "https://cryptovault.com",
-    thumbnail:
-      crypto,
+    thumbnail: crypto,
   },
   {
     title: "WrizzleShop",
     link: "https://wrizzleshop.com",
-    thumbnail:
-      wrizzle,
+    thumbnail: wrizzle,
   },
   {
     title: "Tailwind Master Kit",
@@ -149,39 +160,6 @@ export const products = [
   },
 ];
 
-// testimonials array
-const testimonials = [
-  {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
-];
-
 const content = [
   {
     title: "Teamwork",
@@ -210,84 +188,99 @@ const content = [
   },
 ];
 
-export const languages = [
+const languages = [
   {
     title: "JavaScript",
-    description: "A versatile scripting language commonly used for web development and beyond. It adds interactivity to web pages and enables complex functionality.",
+    description:
+      "A versatile scripting language commonly used for web development and beyond. It adds interactivity to web pages and enables complex functionality.",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    icon: FaJs
+    icon: FaJs,
+    progress: 97,
   },
   {
     title: "TypeScript",
-    description: "A superset of JavaScript that adds optional static typing, improving code maintainability and catching errors early in development.",
+    description:
+      "A superset of JavaScript that adds optional static typing, improving code maintainability and catching errors early in development.",
     link: "https://www.typescriptlang.org/docs/",
-    icon: SiTypescript
+    icon: SiTypescript,
+    progress: 79,
   },
   {
     title: "Tailwind CSS",
-    description: "A utility-first CSS framework that provides a low-level, class-based approach to styling web applications. It offers rapid development with pre-built classes and customization options.",
+    description:
+      "A utility-first CSS framework that provides a low-level, class-based approach to styling web applications. It offers rapid development with pre-built classes and customization options.",
     link: "https://tailwindcss.com/docs/",
-    icon: SiTailwindcss
+    icon: SiTailwindcss,
+    progress: 88,
   },
   {
     title: "Python",
-    description: "A general-purpose, interpreted programming language known for its readability, simplicity, and extensive libraries. It's widely used in web development, data science, scripting, machine learning, and various other domains.",
+    description:
+      "A general-purpose, interpreted programming language known for its readability, simplicity, and extensive libraries. It's widely used in web development, data science, scripting, machine learning, and various other domains.",
     link: "https://docs.python.org/3/",
-    icon: FaPython
+    icon: FaPython,
+    progress: 81,
   },
   {
     title: "React",
-    description: "A JavaScript library for building user interfaces. It's known for its component-based architecture, virtual DOM, and unidirectional data flow, making it efficient and scalable for complex web applications.",
+    description:
+      "A JavaScript library for building user interfaces. It's known for its component-based architecture, virtual DOM, and unidirectional data flow, making it efficient and scalable for complex web applications.",
     link: "https://reactjs.org/docs/getting-started.html",
-    icon: FaReact
+    icon: FaReact,
+    progress: 90,
   },
   {
     title: "Svelte",
-    description: "A component-based web framework that compiles code at build time, resulting in smaller bundle sizes and improved performance. It offers a reactive approach to data handling and a familiar JavaScript syntax.",
+    description:
+      "A component-based web framework that compiles code at build time, resulting in smaller bundle sizes and improved performance. It offers a reactive approach to data handling and a familiar JavaScript syntax.",
     link: "https://svelte.dev/docs",
-    icon: SiSvelte
+    icon: SiSvelte,
+    progress: 70,
   },
   {
     title: "C#",
-    description: "A general-purpose, object-oriented programming language developed by Microsoft. It's widely used for building various types of applications, including web services, desktop applications, and games. C# is known for its strong typing, garbage collection, and integration with the .NET framework.",
+    description:
+      "C# is a Microsoft-developed, object-oriented language used for web services, desktop apps, and games, prized for its strong typing, garbage collection, and .NET framework integration.",
     link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
-    icon: TbBrandCSharp
+    icon: TbBrandCSharp,
+    progress: 45,
   },
   {
     title: "Java",
-    description: "A general-purpose, object-oriented programming language known for its platform independence and vast ecosystem of libraries and frameworks. Java applications can run on different operating systems without modification, making it popular for enterprise applications and web development.",
+    description:
+      "Java is a versatile, object-oriented programming language with platform independence and a rich library of frameworks. Its ability to run on various operating systems without modification makes it ideal for enterprise and web development.",
     link: "https://docs.oracle.com/en/java/javase/latest/docs/index.html",
-    icon: FaJava
+    icon: FaJava,
+    progress: 60,
   },
   {
     title: "HTML & CSS",
-    description: "The fundamental building blocks of web pages. HTML (HyperText Markup Language) defines the structure and content of a web page, while CSS (Cascading Style Sheets) controls the visual presentation. Together, they provide a standardized way to create and style web pages.",
+    description:
+      "The fundamental building blocks of web pages. HTML (HyperText Markup Language) defines the structure and content of a web page, while CSS (Cascading Style Sheets) controls the visual presentation. Together, they provide a standardized way to create and style web pages.",
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    icon: FaHtml5
+    icon: FaHtml5,
+    progress: 97,
   },
 ];
 
-
-const HeroParallaxDemo = () => {
-
-  const testword = "this is it";
+export const MainPage = () => {
   return (
     <>
       <FloatingNav navItems={navItems} />
       <HeroParallax products={products} />
 
       {/* background page */}
-      <div className="mb-16 dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex  h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+      <div className="dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative mb-16 flex  h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         {/* all the elements in here will be placed on the background */}
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center justify-center">
           <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
             Let me be on your Team!
           </p>
           <Button
             borderRadius="1.75rem"
-            className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            className="border-neutral-200 bg-white text-black dark:border-slate-800 dark:bg-slate-900 dark:text-white"
           >
             Contact Me
           </Button>
@@ -295,132 +288,130 @@ const HeroParallaxDemo = () => {
       </div>
 
       {/* next section  */}
-      <div className="flex flex-col justify-center items-center mt-6 p-2 h-full">
+      <div className="mt-6 flex h-full flex-col items-center justify-center p-2">
         <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
           Education
         </p>
 
-      <div className="h-[40rem] w-full flex flex-col items-center justify-center sm:gap-6 md:flex-row">
+        <div className="flex h-[40rem] w-full flex-col items-center justify-center sm:gap-6 md:flex-row">
           {/* pin container */}
-        <PinContainer
-          title="www.alueducation.com"
-          href="https://alueducation.com"
-          className="mt-4"
-        >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-            <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-              African Leadership University
-            </h3>
-            <div className="text-base !m-0 !p-0 font-normal">
-              <span className="text-slate-500 ">
-                Currently Pursuing a Bachelors degree in Software Engineering
-              </span>
+          <PinContainer
+            title="www.alueducation.com"
+            href="https://alueducation.com"
+            className="mt-4"
+          >
+            <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 ">
+              <h3 className="!m-0 max-w-xs !pb-2 text-base  font-bold text-slate-100">
+                African Leadership University
+              </h3>
+              <div className="!m-0 !p-0 text-base font-normal">
+                <span className="text-slate-500 ">
+                  Currently Pursuing a Bachelors degree in Software Engineering
+                </span>
+              </div>
+              <div className="mb-4 mt-4 flex w-full flex-1 items-center justify-center rounded-lg">
+                <Image src={alu} alt="school logo" object-fint="conteaion" />
+              </div>
             </div>
-            <div className="flex flex-1 w-full rounded-lg mt-4 items-center justify-center mb-4">
-              <Image src={alu} alt="school logo" object-fint="conteaion" />
-            </div>
-          </div>
-        </PinContainer>
+          </PinContainer>
 
-        <PinContainer
-          title="www.alx-africa.com"
-          href="https://www.alxafrica.com/"
-        >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-            <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-              ALX-Africa
-            </h3>
-            <div className="text-base !m-0 !p-0 font-normal">
-              <span className="text-slate-500 ">
-                Graduate of the 12 months software Enginering program and specialized in FrontEnd Development
-              </span>
+          <PinContainer
+            title="www.alx-africa.com"
+            href="https://www.alxafrica.com/"
+          >
+            <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 ">
+              <h3 className="!m-0 max-w-xs !pb-2 text-base  font-bold text-slate-100">
+                ALX-Africa
+              </h3>
+              <div className="!m-0 !p-0 text-base font-normal">
+                <span className="text-slate-500 ">
+                  Graduate of the 12 months software Enginering program and
+                  specialized in FrontEnd Development
+                </span>
+              </div>
+              <div className="mb-4 mt-4 flex w-full flex-1 items-center justify-center rounded-lg">
+                <Image src={alx} alt="school logo" object-fint="conteaion" />
+              </div>
             </div>
-            <div className="flex flex-1 w-full rounded-lg mt-4 items-center justify-center mb-4">
-              <Image src={alx} alt="school logo" object-fint="conteaion" />
-            </div>
-          </div>
-        </PinContainer>
-      </div>
+          </PinContainer>
+        </div>
 
-      <div className="p-10 w-full h-full">
-        <div className="flex justify-center items-center m-2">
+        <div className="h-full w-full p-10">
+          <div className="m-2 flex items-center justify-center">
+            <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+              Soft Skills
+            </p>
+          </div>
+          <StickyScroll content={content} />
+        </div>
+
+        {/* radar */}
+        <div className="mt-6 p-2">
           <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
-            Soft Skills
+            Tech Stack and Cloud
           </p>
-        </div>
-        <StickyScroll content={content} />
-      </div>
 
-    {/* radar */}
-      <div className="mt-6 p-2">
-        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
-          Tech Stack and Cloud
-        </p>
+          <div className="relative flex h-96 w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
+            <div className="mx-auto w-full max-w-3xl">
+              <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                <IconContainer
+                  text="SSR"
+                  delay={0.2}
+                  icon={<FaServer className="h-8 w-8 text-slate-600" />}
+                />
+                <IconContainer
+                  delay={0.4}
+                  text="Docker"
+                  icon={<FaDocker className=" h-8 w-8 text-slate-600" />}
+                />
+                <IconContainer
+                  text="TensorFlow"
+                  delay={0.3}
+                  icon={<SiTensorflow className=" h-8 w-8 text-slate-600" />}
+                />
+              </div>
+            </div>
+            <div className="mx-auto w-full max-w-md">
+              <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                <IconContainer
+                  text="Postman API's"
+                  delay={0.5}
+                  icon={<SiPostman className=" h-8 w-8 text-slate-600" />}
+                />
+                <IconContainer
+                  text="NextJs"
+                  icon={<SiNextdotjs className=" h-8 w-8 text-slate-600" />}
+                  delay={0.8}
+                />
+              </div>
+            </div>
+            <div className="mx-auto w-full max-w-3xl">
+              <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
+                <IconContainer
+                  delay={0.6}
+                  text="Git/Github"
+                  icon={<IoGitBranch className=" h-8 w-8 text-slate-600" />}
+                />
+                <IconContainer
+                  delay={0.7}
+                  text="Cloud (AWS)"
+                  icon={<FaAws className=" h-8 w-8 text-slate-600" />}
+                />
+              </div>
+            </div>
 
-        <div className="relative flex h-96 w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
-        <div className="mx-auto w-full max-w-3xl">
-          <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-            <IconContainer 
-              text="SSR" 
-              delay={0.2}
-              icon={<FaServer className="h-8 w-8 text-slate-600" />}
-            />
-            <IconContainer
-              delay={0.4}
-              text="Docker"
-              icon={<FaDocker className=" h-8 w-8 text-slate-600" />}
-            />
-            <IconContainer
-              text="TensorFlow"
-              delay={0.3}
-              icon={<SiTensorflow className=" h-8 w-8 text-slate-600" />}
-            />
+            <Radar className="absolute -bottom-12" />
+            <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
           </div>
         </div>
-        <div className="mx-auto w-full max-w-md">
-          <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-            <IconContainer
-              text="Postman API's"
-              delay={0.5}
-              icon={<SiPostman className=" h-8 w-8 text-slate-600" />}
-            />
-            <IconContainer
-              text="NextJs"
-              icon={
-                <SiNextdotjs className=" h-8 w-8 text-slate-600" />
-              }
-              delay={0.8}
-            />
-          </div>
-        </div>
-        <div className="mx-auto w-full max-w-3xl">
-          <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-            <IconContainer
-              delay={0.6}
-              text="Git/Github"
-              icon={<IoGitBranch className=" h-8 w-8 text-slate-600" />}
-            />
-            <IconContainer
-              delay={0.7}
-              text="Cloud (AWS)"
-              icon={<FaAws className=" h-8 w-8 text-slate-600" />}
-        />
-          </div>
-        </div>
-
-        <Radar className="absolute -bottom-12" />
-        <div className="absolute bottom-0 z-[41] h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
-      </div>
-
-      </div>
       </div>
 
       {/* Languages */}
-      <div className="flex flex-col justify-center items-center mt-12">
+      <div className="mt-12 flex flex-col items-center justify-center">
         <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
           Proficient Languages
         </p>
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="mx-auto max-w-5xl px-8">
           <HoverEffect items={languages} />
         </div>
       </div>
@@ -428,4 +419,4 @@ const HeroParallaxDemo = () => {
   );
 };
 
-export default HeroParallaxDemo;
+export default MainPage;
