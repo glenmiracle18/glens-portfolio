@@ -263,7 +263,7 @@ const languages = [
   },
 ];
 
-export const MainPage = () => {
+const MainPage = () => {
   return (
     <>
       <FloatingNav navItems={navItems} />
