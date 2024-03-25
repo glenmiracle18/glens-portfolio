@@ -84,7 +84,9 @@ export const FloatingNav = ({
           <span>Contact</span>
           <span className="absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-blue-500  to-transparent" />
         </button>
-        <ModeToggle className="mr-2" />
+        <div className="mr-2">
+          <ModeToggle />
+        </div>
       </motion.div>
     </AnimatePresence>
   );
