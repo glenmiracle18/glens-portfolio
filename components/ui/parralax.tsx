@@ -107,11 +107,10 @@ export const Header = () => {
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
       <h1 className="text-6xl font-bold md:text-7xl dark:text-gray-300">
         Glen Miracle, <br /> Built for the Web!
-        <TextGenerateEffect words="I am an Software Engineer with a passion for crafting web applications
-        and exploring the potential of AI/ML. Currently honing my skills as a
-        sophomore at the African Leadership University, I am a javascript
-        enthusiast who thrives on building innovative solutions with powerful
-        libraries." />
+        <TextGenerateEffect
+          words="A frontend developer hailing from Cameroon 🇨🇲. I specialize in crafting user-friendly websites and applications that leave a lasting impression.
+        Step into my cozy corner of the internet, where innovation and creativity converge!"
+        />
       </h1>
     </div>
   );

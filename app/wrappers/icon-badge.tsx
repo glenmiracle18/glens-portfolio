@@ -6,7 +6,7 @@ interface IconBadgeProps {
 
 export const IconBadge = ({ Icon }: IconBadgeProps) => {
   return (
-    <div className="mr-2 flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-700 bg-gradient-to-r from-transparent  via-blue-500 to-transparent shadow-inner">
+    <div className="mr-2 flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-700 bg-gradient-to-r from-transparent  via-blue-500 to-transparent shadow-inner light:bg-blue-500">
       <Icon className="h-8 w-8 text-white" />
     </div>
   );

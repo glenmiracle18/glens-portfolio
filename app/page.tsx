@@ -45,6 +45,7 @@ import {
 import { CiGrid42 } from "react-icons/ci";
 import { FaServer } from "react-icons/fa";
 import { HoverEffect } from "@/components/ui/card-hover";
+import { TimelineComponent } from "@/components/ui/timeline";
 
 const navItems = [
   {
@@ -256,7 +257,7 @@ const languages = [
   {
     title: "HTML & CSS",
     description:
-      "The fundamental building blocks of web pages. HTML (HyperText Markup Language) defines the structure and content of a web page, while CSS (Cascading Style Sheets) controls the visual presentation. Together, they provide a standardized way to create and style web pages.",
+      "The fundamental building blocks of web pages. HTML defines the structure and content of a web page, while CSS controls the visual presentation. Together, they provide a standardized way to create and style web pages.",
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     icon: FaHtml5,
     progress: 97,
@@ -275,25 +276,39 @@ const MainPage = () => {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         {/* all the elements in here will be placed on the background */}
         <div className="flex flex-col items-center justify-center">
-          <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+          <p className="text-center relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-4 text-4xl font-bold text-transparent sm:text-7xl">
             Let me be on your Team!
           </p>
-          <Button
-            borderRadius="1.75rem"
-            className="border-neutral-200 bg-white text-black dark:border-slate-800 dark:bg-slate-900 dark:text-white"
-          >
-            Contact Me
-          </Button>
+          <TextGenerateEffect
+            className="mt-2 text-center font-meduim lg:px-20 text-nuetral-500 hidden lg:block"
+            words="Dynamic and innovative web developer with a passion for crafting immersive digital experiences. Proficient in leveraging cutting-edge technologies such as JavaScript, TypeScript, Vue.js, and Nuxt.js to build responsive and user-friendly web applications. Adept at translating complex concepts into elegant and efficient code, with a strong focus on usability and scalability."
+          />
+          <div className="mt-8">
+            <Button
+              borderRadius="1.75rem"
+              className="border-neutral-200 bg-white text-black dark:border-slate-800 dark:bg-slate-900 dark:text-white"
+            >
+              Contact Me
+            </Button>
+          </div>
         </div>
       </div>
 
-      {/* next section  */}
+      {/* work history */}
+      <div className="lg:px-28 mt-8 ml-8 w-50 mb-8 px-2">
+        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl text-center">
+          Work History
+        </p>
+        <TimelineComponent />
+      </div>
+
+      {/* education  */}
       <div className="mt-6 flex h-full flex-col items-center justify-center p-2">
-        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl mb-4">
           Education
         </p>
 
-        <div className="flex h-[40rem] w-full flex-col items-center justify-center sm:gap-6 md:flex-row">
+        <div className="flex w-full flex-col items-center justify-center sm:gap-6 md:flex-row mb-16">
           {/* pin container */}
           <PinContainer
             title="www.alueducation.com"
@@ -347,7 +362,7 @@ const MainPage = () => {
 
         {/* radar */}
         <div className="mt-6 p-2">
-          <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+          <p className="text-center relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
             Tech Stack and Cloud
           </p>
 
@@ -408,7 +423,7 @@ const MainPage = () => {
 
       {/* Languages */}
       <div className="mt-12 flex flex-col items-center justify-center">
-        <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
+        <p className="text-center relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-7xl">
           Proficient Languages
         </p>
         <div className="mx-auto max-w-5xl px-8">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { IconType } from "react-icons/lib";
 import { Progress } from "@/components/ui/progress";
+import { ThemeProvider } from "next-themes";
 
 interface HoverEffectProps {
   items: {
@@ -21,56 +22,59 @@ export const HoverEffect = ({ items, className }: HoverEffectProps) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div
-      className={cn(
-        "grid grid-cols-1 py-10  md:grid-cols-2  lg:grid-cols-3",
-        className,
-      )}
-    >
-      {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
-          className="group relative  block h-full w-full p-2"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 block h-full w-full rounded-3xl bg-neutral-200  dark:bg-slate-800/[0.8]"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
-          <Card>
-            <CardTitle className="flex flex-row items-center">
-              <IconBadge Icon={item.icon} />
-              {item.title}
-            </CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-            <div className="flex justify-between items-center mt-4">
-              <Progress value={item.progress} className="w-[60%]" />
-              <h1 className="text-xl font-bold text-white">
-                {item.progress}%
-              </h1>
-            </div>
-          </Card>
-        </Link>
-      ))}
-    </div>
+    <ThemeProvider>
+      <div
+        className={cn(
+          "grid grid-cols-2 py-10  md:grid-cols-4  lg:grid-cols-4 overflow-hidden",
+          className,
+        )}
+      >
+        {items.map((item, idx) => (
+          <Link
+            href={item?.link}
+            key={item?.link}
+            className="group relative  block h-full w-full p-2"
+            onMouseEnter={() => setHoveredIndex(idx)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <AnimatePresence>
+              {hoveredIndex === idx && (
+                <motion.span
+                  className="absolute inset-0 block h-full w-full rounded-3xl bg-neutral-200  dark:bg-slate-800/[0.8]"
+                  layoutId="hoverBackground"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.15 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: { duration: 0.15, delay: 0.2 },
+                  }}
+                />
+              )}
+            </AnimatePresence>
+            <Card>
+              <CardTitle className="flex flex-row items-center">
+                <IconBadge Icon={item.icon} />
+                {item.title}
+              </CardTitle>
+              {/* <CardDescription>{item.description}</CardDescription> */}
+              <div className="flex justify-between items-center mt-4">
+                <Progress value={item.progress} className="w-[60%]" />
+                <h1 className="text-xl font-bold dark:text-white text-gray-500">
+                  {item.progress}%
+                </h1>
+              </div>
+            </Card>
+          </Link>
+        ))}
+      </div>
+    </ThemeProvider>
   );
 };
 
+// main card
 export const Card = ({
   className,
   children,
@@ -81,7 +85,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-black p-4 group-hover:border-slate-700 dark:border-white/[0.2]",
+        "relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent dark:bg-black p-2 group-hover:border-slate-700 dark:border-white/[0.2] md:[h-full/2] md:[w-full/2] bg-white border-dark/[0.2]",
         className,
       )}
     >
@@ -91,6 +95,8 @@ export const Card = ({
     </div>
   );
 };
+
+// card title
 export const CardTitle = ({
   className,
   children,
@@ -99,11 +105,18 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("mt-4 font-bold tracking-wide text-zinc-100", className)}>
+    <h4
+      className={cn(
+        "mt-4 font-bold tracking-wide  dark:text-white text-gray-900",
+        className,
+      )}
+    >
       {children}
     </h4>
   );
 };
+
+// card description
 export const CardDescription = ({
   className,
   children,
@@ -114,7 +127,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-sm leading-relaxed tracking-wide text-zinc-400",
+        "mt-8 text-sm leading-relaxed tracking-wide dark:text-white text-gray-900",
         className,
       )}
     >
