@@ -5,7 +5,12 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import { TextGenerateEffect } from "@/components/ui/text-reveal";
 import { PinContainer } from "@/components/ui/3d-pin";
 import Image from "next/image";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import {
+  IconHome,
+  IconMessage,
+  IconPhotoPin,
+  IconUser,
+} from "@tabler/icons-react";
 // projects
 import know_africa from "../public/assets/Know-Africa.jpeg";
 import eduford from "../public/assets/eduford2.png";
@@ -61,7 +66,7 @@ const navItems = [
   {
     name: "Projects",
     link: "/projects",
-    icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    icon: <IconPhotoPin className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Gallery",
