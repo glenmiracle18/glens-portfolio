@@ -51,6 +51,7 @@ import { CiGrid42 } from "react-icons/ci";
 import { FaServer } from "react-icons/fa";
 import { HoverEffect } from "@/components/ui/card-hover";
 import { TimelineComponent } from "@/components/ui/timeline";
+import Approach from "@/components/Approach";
 
 const navItems = [
   {
@@ -435,6 +436,7 @@ const MainPage = () => {
           <HoverEffect items={languages} />
         </div>
       </div>
+      <Approach />
     </>
   );
 };
