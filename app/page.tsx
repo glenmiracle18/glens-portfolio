@@ -52,6 +52,7 @@ import { FaServer } from "react-icons/fa";
 import { HoverEffect } from "@/components/ui/card-hover";
 import { TimelineComponent } from "@/components/ui/timeline";
 import Approach from "@/components/Approach";
+import RecentProjects from "@/components/RecentProjects";
 
 const navItems = [
   {
@@ -314,48 +315,7 @@ const MainPage = () => {
           Education
         </p>
 
-        <div className="flex w-full flex-col items-center justify-center sm:gap-6 md:flex-row mb-16">
-          {/* pin container */}
-          <PinContainer
-            title="www.alueducation.com"
-            href="https://alueducation.com"
-            className="mt-4"
-          >
-            <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 ">
-              <h3 className="!m-0 max-w-xs !pb-2 text-base  font-bold text-slate-100">
-                African Leadership University
-              </h3>
-              <div className="!m-0 !p-0 text-base font-normal">
-                <span className="text-slate-500 ">
-                  Currently Pursuing a Bachelors degree in Software Engineering
-                </span>
-              </div>
-              <div className="mb-4 mt-4 flex w-full flex-1 items-center justify-center rounded-lg">
-                <Image src={alu} alt="school logo" object-fint="conteaion" />
-              </div>
-            </div>
-          </PinContainer>
-
-          <PinContainer
-            title="www.alx-africa.com"
-            href="https://www.alxafrica.com/"
-          >
-            <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 ">
-              <h3 className="!m-0 max-w-xs !pb-2 text-base  font-bold text-slate-100">
-                ALX-Africa
-              </h3>
-              <div className="!m-0 !p-0 text-base font-normal">
-                <span className="text-slate-500 ">
-                  Graduate of the 12 months software Enginering program and
-                  specialized in FrontEnd Development
-                </span>
-              </div>
-              <div className="mb-4 mt-4 flex w-full flex-1 items-center justify-center rounded-lg">
-                <Image src={alx} alt="school logo" object-fint="conteaion" />
-              </div>
-            </div>
-          </PinContainer>
-        </div>
+        <RecentProjects />
 
         <div className="h-full w-full p-10">
           <div className="m-2 flex items-center justify-center">
